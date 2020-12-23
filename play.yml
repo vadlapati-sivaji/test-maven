@@ -1,17 +1,7 @@
---- 
-- 
+---
+- hosts: all
   become: true
-  hosts: all
-  name: Playbook
-  tasks: 
-    - 
-      name: "ensure git is at the latest version"
-      yum: 
-        name: git
-        state: latest
-        update_cache: true
-    - 
-      git: 
-        dest: /home/ansiadmin/test-maven
-        repo: "https://github.com/jilu407/test-maven.git"
-      name: " clone repo"
+  become_method: sudo
+  tasks:
+  - name: copy files
+    copy: src=/var/lib/jenkins/workspace/build-war/target/MavenWebApp.war dest=/opt/tomcat/webapps/
