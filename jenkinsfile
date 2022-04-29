@@ -24,6 +24,13 @@ echo "Compiling the Project.........."
 sh "mvn compile"
 }
 }
+stage('package') 
+{
+steps{
+echo "Compiling the Project.........."
+sh "mvn package"
+}
+}
 stage('Deploy') 
 {
 steps{
