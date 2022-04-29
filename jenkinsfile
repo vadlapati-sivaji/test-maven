@@ -28,7 +28,7 @@ stage('Deploy')
 {
 steps{
 echo "Deploying the Project.........."
-cp **/*.war /home/ubuntu/apache-tomcat/webapps/
+sh cp **/*.war /home/ubuntu/apache-tomcat/webapps/
 }
 }
 }
