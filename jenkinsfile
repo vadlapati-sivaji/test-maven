@@ -1,4 +1,4 @@
-/*pipeline{
+pipeline{
 agent any
 stages 
 {
@@ -32,7 +32,8 @@ echo "Deploying the Project.........."
 }
 }
 }
-*/
+
+/*
 node {
 	stage('Checkout code') {
          git url: 'https://github.com/jilu407/test-maven.git'
@@ -61,3 +62,4 @@ node {
 		
 	}
 }
+*/
