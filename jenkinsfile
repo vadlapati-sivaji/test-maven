@@ -28,7 +28,7 @@ stage('Deploy')
 {
 steps{
 echo "Deploying the Project.........."
-sh "cp **/*.war /home/ubuntu/apache-tomcat/webapps/"
+sh "cp /var/lib/jenkins/workspace/final-check-maven-pipeline/target/*.war /home/ubuntu/apache-tomcat/webapps/"
 }
 }
 }
