@@ -40,6 +40,7 @@ sh "ansible-playbook play.yml"
 }
 }
 }
+}
 
 /*
 node {
