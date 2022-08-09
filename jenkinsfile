@@ -35,7 +35,7 @@ stage('Deploy')
 {
 steps{
 echo "Deploying the Project.........."
-#sh "cp /var/lib/jenkins/workspace/maven-pipeline-1/target/*.war /opt/tomcat/webapps/"
+/*sh "cp /var/lib/jenkins/workspace/maven-pipeline-1/target/*.war /opt/tomcat/webapps/" */
 ansiblePlaybook become: true, playbook: 'play.yml'
 }
 }
