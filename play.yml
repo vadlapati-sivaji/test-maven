@@ -4,4 +4,4 @@
   become_method: sudo
   tasks:
   - name: copy files
-    copy: src=/var/lib/jenkins/workspace/vamshi-pipeline-ansible/target/MavenWebApp.war dest=/opt/tomcat/webapps/
+    copy: src=/var/lib/jenkins/workspace/deploy-ansible/target/MavenWebApp.war dest=/opt/tomcat/webapps/
