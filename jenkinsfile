@@ -1,4 +1,4 @@
-/*pipeline{
+pipeline{
 agent any
 stages 
 {
@@ -24,15 +24,25 @@ echo "Compiling the Project.........."
 sh "mvn compile"
 }
 }
+stage('package') 
+{
+steps{
+echo "Compiling the Project.........."
+sh "mvn package"
+}
+}
 stage('Deploy') 
 {
 steps{
 echo "Deploying the Project.........."
+/* sh "cp /var/lib/jenkins/workspace/maven-pipeline-1/target/*.war /opt/tomcat/webapps/" */
+ansiblePlaybook credentialsId: '7a070610-7727-4206-8c6c-64b254c25470', disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.inv', playbook: 'play.yml', sudoUser: null
 }
 }
 }
 }
-*/
+
+/*
 node {
 	stage('Checkout code') {
          git url: 'https://github.com/jilu407/test-maven.git'
@@ -61,3 +71,4 @@ node {
 		
 	}
 }
+*/
