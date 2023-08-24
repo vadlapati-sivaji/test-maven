@@ -4,4 +4,4 @@
   become_method: sudo
   tasks:
   - name: copy war file
-    copy: src=/var/lib/jenkins/workspace/deploy-tomcat/target/MavenWebApp.war dest=/opt/tomcat/webapps/
+    copy: src=/var/lib/jenkins/workspace/java-app-deploy/target/MavenWebApp.war dest=/opt/tomcat/webapps/
