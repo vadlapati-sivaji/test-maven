@@ -1,3 +1,4 @@
+/*
 pipeline{
 agent any
 stages 
@@ -41,8 +42,7 @@ ansiblePlaybook credentialsId: 'edf29c56-6626-4ce1-a40e-4d6a98e6afea', disableHo
 }
 }
 }
-
-/*
+*/
 node {
 	stage('Checkout code') {
          git url: 'https://github.com/jilu407/test-maven.git'
@@ -53,7 +53,7 @@ node {
 		sh "mvn -version"
         sh "mvn clean"
 	}
-	stage('test'){
+	stage('test 007'){
 		echo 'test pass'
 		sh "mvn test"
 	}
@@ -71,4 +71,3 @@ node {
 		
 	}
 }
-*/
